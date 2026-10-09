@@ -1,0 +1,202 @@
+site_name: MSSQL Database Assessment
+
+theme:
+  name: material
+  icon:
+    admonition:
+      note: fontawesome/solid/note-sticky
+      abstract: fontawesome/solid/book
+      info: fontawesome/solid/circle-info
+      tip: fontawesome/solid/bullhorn
+      success: fontawesome/solid/check
+      question: fontawesome/solid/circle-question
+      warning: fontawesome/solid/triangle-exclamation
+      failure: fontawesome/solid/bomb
+      danger: fontawesome/solid/skull
+      bug: fontawesome/solid/robot
+      example: fontawesome/solid/flask
+      quote: fontawesome/solid/quote-left
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+nav:
+  - Home: index.md
+  - Permissions: permissions.md
+  - Setup: setup/howto.md
+  - PowerShell Scripts:
+    - ConsolidateFiles: powershell/ConsolidateFiles.md
+    - GenerateAppQuestionnaire: powershell/GenerateAppQuestionnaire.md
+    - GenerateRDSSupport: powershell/GenerateRDSSupport.md
+    - InvokeExecution: powershell/InvokeExecution.md
+    - LoadDatabase: powershell/LoadDatabase.md
+  - Schemas:
+    - dbo: schemas/dbo.md
+    - mpa: schemas/mpa.md
+    - raw: schemas/raw.md
+  - Tables:
+    - database_clr_information: tables/database_clr_information.md
+    - database_cpu_utilization: tables/database_cpu_utilization.md
+    - database_db_audit_information: tables/database_db_audit_information.md
+    - database_direct_reference_information: tables/database_direct_reference_information.md
+    - database_downgrade_to_standard: tables/database_downgrade_to_standard.md
+    - database_environment_settings_on_ssisdb: tables/database_environment_settings_on_ssisdb.md
+    - database_filestream_information: tables/database_filestream_information.md
+    - database_general_information: tables/database_general_information.md
+    - database_inmemory_information: tables/database_inmemory_information.md
+    - database_io_utilization: tables/database_io_utilization.md
+    - database_msdb_ssis_packages: tables/database_msdb_ssis_packages.md
+    - database_primary_key_information: tables/database_primary_key_information.md
+    - database_replication_publisher_information: tables/database_replication_publisher_information.md
+    - database_service_broker_information: tables/database_service_broker_information.md
+    - database_size_information: tables/database_size_information.md
+    - database_ssisdb_ssis_packages: tables/database_ssisdb_ssis_packages.md
+    - database_ssrs_reports_information: tables/database_ssrs_reports_information.md
+    - database_ssrs_subscription_information: tables/database_ssrs_subscription_information.md
+    - database_table_information: tables/database_table_information.md
+    - database_to_server_mapping: tables/database_to_server_mapping.md
+    - database_user_permissions: tables/database_user_permissions.md
+    - database_user_securables: tables/database_user_securables.md
+    - default_sp_configure: tables/default_sp_configure.md
+    - errorlog: tables/errorlog.md
+    - feature_supportability: tables/feature_supportability.md
+    - logins_exclusion_list: tables/logins_exclusion_list.md
+    - master_applications: tables/master_applications.md
+    - master_databases: tables/master_databases.md
+    - question_table: tables/question_table.md
+    - rds_instance_sizes: tables/rds_instance_sizes.md
+    - server_ag_information: tables/server_ag_information.md
+    - server_agent_alerts: tables/server_agent_alerts.md
+    - server_agent_jobs_information: tables/server_agent_jobs_information.md
+    - server_agent_operators: tables/server_agent_operators.md
+    - server_audit_information: tables/server_audit_information.md
+    - server_backup_information: tables/server_backup_information.md
+    - server_buffer_pool_extension_information: tables/server_buffer_pool_extension_information.md
+    - server_cluster_information: tables/server_cluster_information.md
+    - server_configuration_in_use: tables/server_configuration_in_use.md
+    - server_connections_by_ip_address: tables/server_connections_by_ip_address.md
+    - server_cpu_utilization: tables/server_cpu_utilization.md
+    - server_credential_information: tables/server_credential_information.md
+    - server_custom_errors_created: tables/server_custom_errors_created.md
+    - server_database_mail_information: tables/server_database_mail_information.md
+    - server_db_snapshot_information: tables/server_db_snapshot_information.md
+    - server_deprecated_features: tables/server_deprecated_features.md
+    - server_event_notification_information: tables/server_event_notification_information.md
+    - server_general_information: tables/server_general_information.md
+    - server_hardware_information: tables/server_hardware_information.md
+    - server_installed_services_information: tables/server_installed_services_information.md
+    - server_linked_server_information: tables/server_linked_server_information.md
+    - server_logins_and_permissions: tables/server_logins_and_permissions.md
+    - server_logshipping_information: tables/server_logshipping_information.md
+    - server_maintenance_plan_information: tables/server_maintenance_plan_information.md
+    - server_mirroring_information: tables/server_mirroring_information.md
+    - server_pbm_information: tables/server_pbm_information.md
+    - server_proxy_agent_information: tables/server_proxy_agent_information.md
+    - server_replication_information: tables/server_replication_information.md
+    - server_rg_information: tables/server_rg_information.md
+    - server_securables: tables/server_securables.md
+    - server_tcp_endpoints_information: tables/server_tcp_endpoints_information.md
+    - server_tcp_port_information: tables/server_tcp_port_information.md
+    - server_tde_information: tables/server_tde_information.md
+    - server_timezone_information: tables/server_timezone_information.md
+    - server_trace_flag_information: tables/server_trace_flag_information.md
+    - server_trigger_information: tables/server_trigger_information.md
+    - server_volume_information: tables/server_volume_information.md
+    - server_volume_latency: tables/server_volume_latency.md
+    - sql_server_extended_support_list: tables/sql_server_extended_support_list.md
+    - ssis_packages_component_type_ssisdb: tables/ssis_packages_component_type_ssisdb.md
+    - ssis_packages_connection_type_msdb: tables/ssis_packages_connection_type_msdb.md
+    - ssis_packages_connection_type_ssisdb: tables/ssis_packages_connection_type_ssisdb.md
+  - Functions:
+    - adm.ufn_RDSInstanceRecommendation: functions/adm.ufn_RDSInstanceRecommendation.md
+  - Stored Procedures:
+    - mpa.ConfirmAgentJobs: stored_procedures/mpa.ConfirmAgentJobs.md
+    - mpa.ConfirmCLRUsage: stored_procedures/mpa.ConfirmCLRUsage.md
+    - mpa.ConfirmCredentials: stored_procedures/mpa.ConfirmCredentials.md
+    - mpa.ConfirmDowngradeToStandard: stored_procedures/mpa.ConfirmDowngradeToStandard.md
+    - mpa.ConfirmDatabaseInterdependency: stored_procedures/mpa.ConfirmDatabaseInterdependency.md
+    - mpa.ConfirmDatabaseMail: stored_procedures/mpa.ConfirmDatabaseMail.md
+    - mpa.ConfirmDatabaseUsers: stored_procedures/mpa.ConfirmDatabaseUsers.md
+    - mpa.ConfirmLinkedServers: stored_procedures/mpa.ConfirmLinkedServers.md
+    - mpa.ConfirmRDSSupport: stored_procedures/mpa.ConfirmRDSSupport.md
+    - mpa.ConfirmSPConfigure: stored_procedures/mpa.ConfirmSPConfigure.md
+    - mpa.ConfirmSSISPackages: stored_procedures/mpa.ConfirmSSISPackages.md
+    - mpa.ConfirmSSRSReports: stored_procedures/mpa.ConfirmSSRSReports.md
+    - mpa.GeneralInformation: stored_procedures/mpa.GeneralInformation.md
+    - dbo.FixSSIS_packages_connection_type_ssisdb: stored_procedures/dbo.FixSSIS_packages_connection_type_ssisdb.md
+    - dbo.spCleanUpAssessmentDatabase: stored_procedures/dbo.spCleanUpAssessmentDatabase.md
+  - Views:
+    - dbo.vw_clr_usage: views/dbo.vw_clr_usage.md
+    - dbo.vw_database_agent_job_information_all: views/dbo.vw_database_agent_job_information_all.md
+    - dbo.vw_database_agent_job_information: views/dbo.vw_database_agent_job_information.md
+    - dbo.vw_database_audit_information: views/dbo.vw_database_audit_information.md
+    - dbo.vw_database_general_information: views/dbo.vw_database_general_information.md
+    - dbo.vw_logins_and_users_instance: views/dbo.vw_logins_and_users_instance.md
+    - dbo.vw_ssis_package_information: views/dbo.vw_ssis_package_information.md
+  - Scripts:
+    - database_clr_information: scripts/database_clr_information.md
+    - database_cpu_utilization: scripts/database_cpu_utilization.md
+    - database_db_audit_information: scripts/database_db_audit_information.md
+    - database_direct_reference_information: scripts/database_direct_reference_information.md
+    - database_downgrade_to_standard: scripts/database_downgrade_to_standard.md
+    - database_environment_settings_on_ssisdb: scripts/database_environment_settings_on_ssisdb.md
+    - database_filestream_information: scripts/database_filestream_information.md
+    - database_general_information: scripts/database_general_information.md
+    - database_inmemory_information: scripts/database_inmemory_information.md
+    - database_io_utilization: scripts/database_io_utilization.md
+    - database_msdb_ssis_packages: scripts/database_msdb_ssis_packages.md
+    - database_primary_key_information: scripts/database_primary_key_information.md
+    - database_replication_publisher_information: scripts/database_replication_publisher_information.md
+    - database_service_broker_information: scripts/database_service_broker_information.md
+    - database_size_information: scripts/database_size_information.md
+    - database_ssisdb_ssis_packages: scripts/database_ssisdb_ssis_packages.md
+    - database_ssrs_reports_information: scripts/database_ssrs_reports_information.md
+    - database_ssrs_subscription_information: scripts/database_ssrs_subscription_information.md
+    - database_table_information: scripts/database_table_information.md
+    - database_to_server_mapping: scripts/database_to_server_mapping.md
+    - database_user_permissions: scripts/database_user_permissions.md
+    - database_user_securables: scripts/database_user_securables.md
+    - server_agent_alerts: scripts/server_agent_alerts.md
+    - server_agent_jobs_information: scripts/server_agent_jobs_information.md
+    - server_agent_operators: scripts/server_agent_operators.md
+    - server_ag_information: scripts/server_ag_information.md
+    - server_audit_information: scripts/server_audit_information.md
+    - server_backup_information: scripts/server_backup_information.md
+    - server_buffer_pool_extension_information: scripts/server_buffer_pool_extension_information.md
+    - server_cluster_information: scripts/server_cluster_information.md
+    - server_configuration_in_use: scripts/server_configuration_in_use.md
+    - server_connections_by_ip_address: scripts/server_connections_by_ip_address.md
+    - server_cpu_utilization: scripts/server_cpu_utilization.md
+    - server_credential_information: scripts/server_credential_information.md
+    - server_custom_errors_created: scripts/server_custom_errors_created.md
+    - server_database_mail_information: scripts/server_database_mail_information.md
+    - server_db_snapshot_information: scripts/server_db_snapshot_information.md
+    - server_deprecated_features: scripts/server_deprecated_features.md
+    - server_event_notification_information: scripts/server_event_notification_information.md
+    - server_general_information: scripts/server_general_information.md
+    - server_hardware_information: scripts/server_hardware_information.md
+    - server_installed_services_information: scripts/server_installed_services_information.md
+    - server_linked_server_information: scripts/server_linked_server_information.md
+    - server_logins_and_permissions: scripts/server_logins_and_permissions.md
+    - server_logshipping_information: scripts/server_logshipping_information.md
+    - server_maintenance_plan_information: scripts/server_maintenance_plan_information.md
+    - server_mirroring_information: scripts/server_mirroring_information.md
+    - server_pbm_information: scripts/server_pbm_information.md
+    - server_proxy_agent_information: scripts/server_proxy_agent_information.md
+    - server_replication_information: scripts/server_replication_information.md
+    - server_rg_information: scripts/server_rg_information.md
+    - server_securables: scripts/server_securables.md
+    - server_tcp_endpoints_information: scripts/server_tcp_endpoints_information.md
+    - server_tcp_port_information: scripts/server_tcp_port_information.md
+    - server_tde_information: scripts/server_tde_information.md
+    - server_timezone_information: scripts/server_timezone_information.md
+    - server_trace_flag_information: scripts/server_trace_flag_information.md
+    - server_trigger_information: scripts/server_trigger_information.md
+    - server_volume_information: scripts/server_volume_information.md
+    - server_volume_latency: scripts/server_volume_latency.md
+    - ssis_packages_connection_type_msdb: scripts/ssis_packages_connection_type_msdb.md
+    - ssis_packages_component_type_ssisdb: scripts/ssis_packages_component_type_ssisdb.md
+    - ssis_packages_connection_type_ssisdb: scripts/ssis_packages_connection_type_ssisdb.md
