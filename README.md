@@ -69,13 +69,13 @@ cd $Env:DB_ASSESSMENT_HOME\DatabaseAssessment
 # 4. Run assessment against all servers
 .\InvokeExecution.ps1
 
-# 5. Consolidate data from all instances
+# 5. Consolidate data from all instances. Step 5 generates a consolidated Excel file with all the collected data.
 .\ConsolidateFiles.ps1
 
-# 6. Load into assessment database (auto-creates if needed)
+# 6. Load into assessment database (auto-creates if needed) [optional, Steps 6 and 7 just set up an MSSQL database and ingest that data into it. The data can stay in the customer's environment or come to the AWS side, whichever they prefer. There's no PII in it, only metadata.]
 .\LoadDatabase.ps1 -SqlInstance "YOURSERVER" -DatabaseName "AwsDatabaseAssessment"
 
-# 7. Generate reports
+# 7. Generate reports [optional]
 .\GenerateAppQuestionnaire.ps1 -SqlInstance "YOURSERVER" -OutputPath "C:\Reports"
 .\GenerateRDSSupport.ps1 -SqlInstance "YOURSERVER" -OutputPath "C:\Reports"
 ```
